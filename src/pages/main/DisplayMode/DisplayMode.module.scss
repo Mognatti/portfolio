@@ -1,0 +1,18 @@
+.mode {
+  display: flex;
+  margin-top: 15px;
+  margin-left: 90%;
+  background-color: transparent;
+  padding: 8px;
+  width: 5%;
+  justify-content: right;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 10px 5px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  &__dark {
+    justify-content: left;
+    background-color: rgb(216, 216, 216);
+    box-shadow: 10px 5px 1px rgba(255, 255, 255, 0.15);
+  }
+}

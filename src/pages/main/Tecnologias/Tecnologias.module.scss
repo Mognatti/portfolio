@@ -1,0 +1,44 @@
+.container {
+  width: 100%;
+}
+
+.title {
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  padding: 8px;
+  font-size: 28px;
+  border-bottom: 1px solid #000;
+  &__dark {
+    border-bottom: 1px solid rgb(124, 191, 125);
+  }
+}
+
+.list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  li:hover {
+    transform: scale(1.07);
+    border: 1px solid #fff;
+  }
+}
+
+.item {
+  padding: 36px;
+  text-align: center;
+  width: 25%;
+  margin: 16px;
+  border-radius: 15px;
+  background-color: rgb(124, 191, 125);
+  &__description {
+    text-align: justify;
+    font-size: 19px;
+  }
+  &__dark {
+    background-color: #242424;
+    color: white;
+  }
+}

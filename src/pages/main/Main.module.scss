@@ -1,0 +1,115 @@
+.main {
+  display: flex;
+  grid-template-columns: 2;
+  margin-top: 15px;
+}
+
+.intro {
+  justify-content: center;
+  text-align: justify;
+  width: 100%;
+  font-size: 24px;
+  padding: 24px;
+  &__title {
+    font-size: 36px;
+    text-align: center;
+    --caret: currentcolor;
+  }
+}
+
+.gif {
+  padding: 24px;
+  margin-top: 45px;
+  width: 300px;
+  height: 250px;
+}
+
+@keyframes typing {
+  4.5% {
+    content: "";
+  }
+  9% {
+    content: "B";
+  }
+  13.5% {
+    content: "Be";
+  }
+  18% {
+    content: "Bem";
+  }
+  21.5% {
+    content: "Bem v";
+  }
+  26% {
+    content: "Bem vindo";
+  }
+  30.5% {
+    content: "Bem vindo a";
+  }
+  35% {
+    content: "Bem vindo ao";
+  }
+  39.5% {
+    content: "Bem vindo ao m";
+  }
+  44% {
+    content: "Bem vindo ao me";
+  }
+
+  44.5% {
+    content: "Bem vindo ao meu";
+  }
+
+  49% {
+    content: "Bem vindo ao meu";
+  }
+  53.5% {
+    content: "Bem vindo ao meu p";
+  }
+  58% {
+    content: "Bem vindo ao meu po";
+  }
+  62.5% {
+    content: "Bem vindo ao meu por";
+  }
+  67% {
+    content: "Bem vindo ao meu port";
+  }
+  71.5% {
+    content: "Bem vindo ao meu portf";
+  }
+
+  76% {
+    content: "Bem vindo ao meu portfo";
+  }
+  80.5% {
+    content: "Bem vindo ao meu portfol";
+  }
+  85% {
+    content: "Bem vindo ao meu portfoli";
+  }
+  89.5% {
+    content: "Bem vindo ao meu portfolio";
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.intro__title::before {
+  content: "";
+  animation: typing 5s infinite;
+}
+
+.intro__title::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 0.5s linear infinite;
+}

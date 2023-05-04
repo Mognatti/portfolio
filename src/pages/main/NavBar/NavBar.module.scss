@@ -1,0 +1,11 @@
+.nav {
+  display: flex;
+  margin-top: -16px;
+  background-color: #121212;
+  color: white;
+  font-size: 18px;
+  &__dark {
+    background-color: white;
+    color: #121212;
+  }
+}
