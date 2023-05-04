@@ -1,5 +1,4 @@
 import styles from "./Main.module.scss";
-import gif from "C:/Users/Caio Mognatti/Documents/Estudos e Livros/Portfolio/Portfolio/src/assets/coding_gif.gif";
 
 export default function Main() {
   return (
@@ -16,9 +15,6 @@ export default function Main() {
           falta determinação para tal! Estudo diariamente e desejo me
           diferenciar cada vez mais.
         </p>
-      </div>
-      <div className={styles.gif__container}>
-        <img className={styles.gif} src={gif} alt="coding_gif"></img>
       </div>
     </section>
   );
