@@ -1,3 +1,5 @@
+@import "../../../styles/variables.scss";
+
 .container {
   width: 100%;
 }
@@ -7,10 +9,10 @@
   margin-right: 20%;
   text-align: center;
   padding: 8px;
-  font-size: 28px;
+  font-size: $font-size-title;
   border-bottom: 1px solid #000;
   &__dark {
-    border-bottom: 1px solid rgb(124, 191, 125);
+    border-bottom: 1px solid $green-bg-color;
   }
 }
 
@@ -20,10 +22,6 @@
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
-  li:hover {
-    transform: scale(1.07);
-    border: 1px solid #fff;
-  }
 }
 
 .item {
@@ -32,13 +30,25 @@
   width: 25%;
   margin: 16px;
   border-radius: 15px;
-  background-color: rgb(124, 191, 125);
+  transition: 1s;
+  background-color: $green-bg-color;
+  box-shadow: 10px 5px 1px rgba(0, 0, 0, 0.3);
+
   &__description {
     text-align: justify;
     font-size: 19px;
   }
   &__dark {
-    background-color: #242424;
+    transition: 1s;
+    background-color: $dark-gray;
     color: white;
+  }
+}
+
+.item:hover {
+  transform: scale(1.07);
+  border: 1px solid black;
+  &__dark {
+    border: 1px solid $green-bg-color;
   }
 }

@@ -1,11 +1,33 @@
 .nav {
   display: flex;
   margin-top: -16px;
+  transition: all 1s;
   background-color: #121212;
-  color: white;
+  color: rgb(229, 229, 229);
   font-size: 18px;
+  &__title {
+    width: 85%;
+    display: flex;
+    justify-content: left;
+    margin-left: 15px;
+  }
   &__dark {
-    background-color: white;
+    transition: all 1s;
+    background-color: rgb(229, 229, 229);
     color: #121212;
+  }
+}
+
+.list {
+  display: inline-flex;
+  text-align: justify;
+}
+
+.list li {
+  margin-left: 16px;
+  color: white;
+  :hover {
+    transition: 1s;
+    opacity: 0.3;
   }
 }

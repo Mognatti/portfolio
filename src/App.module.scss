@@ -1,7 +1,14 @@
+@import "./styles/variables.scss";
+
 .app {
   margin: 0;
+  padding: 0;
+  transition: all ease-in 1s;
+  background-color: rgb(229, 229, 229);
+  color: $background-color-dark;
   &__dark {
-    color: white;
-    background-color: #121212;
+    transition: all ease-in 1s;
+    color: $font-color-dark;
+    background-color: $background-color-dark;
   }
 }

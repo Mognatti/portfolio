@@ -1,6 +1,6 @@
 import { ImHtmlFive, ImCss3 } from "react-icons/im";
 import { IoLogoGithub } from "react-icons/io";
-import { SiTypescript, SiJavascript } from "react-icons/si";
+import { SiTypescript, SiJavascript, SiSass } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import styles from "./Tecnologias.module.scss";
 import classNames from "classnames";
@@ -24,16 +24,22 @@ export default function Tecnologias({ mode }: Props) {
         "Realizei cursos de CSS e me peocuopo com a adequada estilização das aplicações que crio, insclusive aplicando Material Design.",
     },
     {
+      nome: "Sass",
+      icon: <SiSass size="40" />,
+      description:
+        "Utilizo essa extenção o CSS em conjunto com o CSS modules para melhor estilizar e organizar as minhas aplicações. Além dele, ainda tenho conhecimento e prática com Styled Components.",
+    },
+    {
       nome: "JavaScript",
       icon: <SiJavascript size="40" />,
       description:
-        "Seja JS nativo ou através da biblioteca JSX, sou capaz de utilizar o JS para manipular o DOM para criar aplicações com comportamento interativo, priorizando a UX",
+        "Seja JS nativo ou através da biblioteca JSX, sou capaz de manipular o DOM para criar aplicações com comportamento interativo, priorizando a UX",
     },
     {
       nome: "TypeScript",
       icon: <SiTypescript size="40" />,
       description:
-        "Tenho domínio sobre o uso de TypeScript aplicado ao React, sendo capaz de tornar o código mais organizado e menos sucetível a erros durante o seu desenvolvimento",
+        "Tenho domínio sobre o uso de TypeScript aplicado ao React, sendo capaz de tornar o código mais organizado e menos suscetível a erros durante o seu desenvolvimento",
     },
     {
       nome: "React",
@@ -71,7 +77,14 @@ export default function Tecnologias({ mode }: Props) {
             >
               {tecnologia.icon}
 
-              <p>{tecnologia.nome}</p>
+              <p
+                className={classNames({
+                  [styles.item__name]: true,
+                  [styles["item__name__dark"]]: mode === "dark",
+                })}
+              >
+                {tecnologia.nome}
+              </p>
 
               <p
                 className={classNames({

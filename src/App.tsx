@@ -5,9 +5,10 @@ import DisplayMode from "./pages/main/DisplayMode";
 import styles from "./App.module.scss";
 import classNames from "classnames";
 import NavBar from "./pages/main/NavBar";
+import Projetos from "./pages/main/Projetos";
 
 function App() {
-  const [mode, setMode] = useState("dark");
+  const [mode, setMode] = useState("ligth");
 
   return (
     <div
@@ -17,10 +18,11 @@ function App() {
       })}
     >
       <br />
-      <NavBar mode={mode} />
+      <NavBar mode={mode} setMode={setMode} />
       <DisplayMode mode={mode} setMode={setMode} />
       <Main />
       <Tecnologias mode={mode} />
+      <Projetos mode={mode} />
     </div>
   );
 }
