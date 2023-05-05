@@ -1,7 +1,7 @@
 import styles from "./Projetos.module.scss";
 import classNames from "classnames";
 import { SiTypescript, SiSass } from "react-icons/si";
-import { ImHtmlFive, ImCss3 } from "react-icons/im";
+import { ImHtmlFive } from "react-icons/im";
 import { FaReact } from "react-icons/fa";
 import AluroniThumb from "../../../../public/img/Aluroni_Preview.png";
 
