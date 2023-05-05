@@ -1,28 +1,49 @@
 @import "../../styles/variables.scss";
 .main {
-  display: flex;
+  height: 720px;
+}
+
+.about {
+  display: grid;
   grid-template-columns: 2;
-  margin-top: 15px;
+  justify-content: center;
+  &__photo {
+    width: 300px;
+    grid-column: 1;
+    padding: 18px;
+    border-radius: 40px;
+  }
+  &__description {
+    border-left: 1px solid $background-color-dark;
+    grid-column: 2;
+    width: fit-content;
+    text-align: justify;
+    font-size: 22px;
+    padding: 18px;
+    &__dark {
+      border-left: 1px solid $green-bg-color;
+    }
+    &__icons {
+      text-align: center;
+    }
+    &__icon {
+      padding: 8px;
+    }
+  }
 }
 
 .intro {
+  margin-top: 0px;
   justify-content: center;
   text-align: justify;
-  width: 100%;
   font-size: 24px;
   padding: 24px;
   &__title {
+    padding: 18px;
     font-size: 36px;
     text-align: center;
     --caret: currentcolor;
   }
-}
-
-.gif {
-  padding: 24px;
-  margin-top: 45px;
-  width: 300px;
-  height: 250px;
 }
 
 @keyframes typing {
@@ -121,4 +142,34 @@
 
 .intro__title__dark::before {
   border-bottom: 1px solid $green-bg-color;
+}
+
+.git {
+  transition: 250ms;
+  color: black;
+  cursor: pointer;
+  &__dark {
+    color: white;
+  }
+}
+
+.git:hover {
+  color: $green-bg-color;
+}
+
+.linkedin {
+  transition: 250ms;
+  color: black;
+  cursor: pointer;
+  &__dark {
+    color: white;
+  }
+}
+
+.linkedin:hover {
+  color: #0e76a8;
+}
+
+.git__dark:hover {
+  color: $green-bg-color;
 }
