@@ -5,18 +5,47 @@
   margin-top: 8px;
   justify-content: right;
   margin-left: 88.9%;
-  background-color: $green-bg-color;
+  background-color: transparent;
   padding: 8px;
   width: 6%;
   border-radius: 15px;
-  border: none;
+  border: 1px solid $green-bg-color;
   box-shadow: 10px 5px 1px rgba(0, 0, 0, 0.3);
+  transition: 250ms;
   cursor: pointer;
-  transition: background-color 1s;
+  transition: background-color 250ms;
   &__dark {
-    transition: background-color 1s;
+    transition: background-color 250ms;
     justify-content: left;
-    background-color: #242424;
-    box-shadow: 10px 5px 1px $dark-gray;
+    background-color: transparent;
+    border: 2px solid $background-color;
   }
+}
+
+.mode__icon__dark {
+  color: white;
+}
+
+.mode__icon {
+  color: $green-bg-color;
+}
+
+.mode:hover {
+  transition: 250ms;
+
+  border: 1px solid white;
+  transform: scale(1.07);
+
+  .mode__icon {
+    transition: 250ms;
+    color: black;
+  }
+  .mode__icon__dark {
+    transition: 250ms;
+    color: $green-bg-color;
+  }
+}
+
+.mode__dark:hover {
+  border: 1px solid $green-bg-color;
 }

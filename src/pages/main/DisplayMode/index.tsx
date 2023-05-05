@@ -22,7 +22,7 @@ export default function DisplayMode({ mode, setMode }: Props) {
       onClick={() => handleClickMode()}
     >
       {mode === "dark" ? (
-        <MdDarkMode size="20" className={styles.mode__icon} />
+        <MdDarkMode size="20" className={styles.mode__icon__dark} />
       ) : (
         <MdLightMode size="20" className={styles.mode__icon} />
       )}

@@ -1,3 +1,4 @@
+@import "../../styles/variables.scss";
 .main {
   display: flex;
   grid-template-columns: 2;
@@ -25,74 +26,74 @@
 }
 
 @keyframes typing {
-  4.5% {
+  6.5% {
     content: "";
   }
   9% {
-    content: "B";
+    content: "S";
   }
   13.5% {
-    content: "Be";
+    content: "So";
   }
   18% {
-    content: "Bem";
+    content: "Sot";
   }
   21.5% {
-    content: "Bem v";
+    content: "Sotr";
   }
   26% {
-    content: "Bem vindo";
+    content: "Sotre";
   }
   30.5% {
-    content: "Bem vindo a";
+    content: "Sotr";
   }
   35% {
-    content: "Bem vindo ao";
+    content: "Sot";
   }
   39.5% {
-    content: "Bem vindo ao m";
+    content: "So";
   }
   44% {
-    content: "Bem vindo ao me";
+    content: "Sobr";
   }
 
   44.5% {
-    content: "Bem vindo ao meu";
+    content: "Sobre";
   }
 
   49% {
-    content: "Bem vindo ao meu";
+    content: "Sobre ";
   }
   53.5% {
-    content: "Bem vindo ao meu p";
+    content: "Sobre m";
   }
   58% {
-    content: "Bem vindo ao meu po";
+    content: "Sobre mi";
   }
   62.5%,
   70% {
-    content: "Bem vindo ao meu por";
+    content: "Sobre mim";
   }
   67% {
-    content: "Bem vindo ao meu port";
+    content: "Sobre mim";
   }
   71.5% {
-    content: "Bem vindo ao meu portf";
+    content: "Sobre mim";
   }
 
   76% {
-    content: "Bem vindo ao meu portfo";
+    content: "Sobre mim";
   }
   80.5%,
   88% {
-    content: "Bem vindo ao meu portfol";
+    content: "Sobre mim";
   }
   85% {
-    content: "Bem vindo ao meu portfoli";
+    content: "Sobre m";
   }
-  89.5%,
+  95%,
   100% {
-    content: "Bem vindo ao meu portfolio";
+    content: "Sobr";
   }
 }
 
@@ -108,11 +109,16 @@
 
 .intro__title::before {
   content: "";
-  animation: typing 5s infinite;
+  animation: typing 7s infinite;
+  border-bottom: 1px solid black;
 }
 
 .intro__title::after {
   content: "";
   border-right: 1px solid var(--caret);
   animation: blink 0.5s linear infinite;
+}
+
+.intro__title__dark::before {
+  border-bottom: 1px solid $green-bg-color;
 }

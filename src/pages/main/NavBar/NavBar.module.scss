@@ -1,7 +1,7 @@
 .nav {
   display: flex;
   margin-top: -16px;
-  transition: all 1s;
+  transition: all 350ms;
   background-color: #121212;
   color: rgb(229, 229, 229);
   font-size: 18px;
@@ -12,7 +12,7 @@
     margin-left: 15px;
   }
   &__dark {
-    transition: all 1s;
+    transition: all 350ms;
     background-color: rgb(229, 229, 229);
     color: #121212;
   }
@@ -28,6 +28,6 @@
   color: white;
   :hover {
     transition: 1s;
-    opacity: 0.3;
+    opacity: 0.5;
   }
 }

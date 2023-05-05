@@ -6,6 +6,7 @@ import styles from "./App.module.scss";
 import classNames from "classnames";
 import NavBar from "./pages/main/NavBar";
 import Projetos from "./pages/main/Projetos";
+import CursosECertificados from "./pages/main/CursosECertificados";
 
 function App() {
   const [mode, setMode] = useState("ligth");
@@ -20,9 +21,10 @@ function App() {
       <br />
       <NavBar mode={mode} setMode={setMode} />
       <DisplayMode mode={mode} setMode={setMode} />
-      <Main />
+      <Main mode={mode} />
       <Tecnologias mode={mode} />
       <Projetos mode={mode} />
+      <CursosECertificados mode={mode} />
     </div>
   );
 }

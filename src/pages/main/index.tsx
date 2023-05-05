@@ -1,10 +1,20 @@
 import styles from "./Main.module.scss";
+import classNames from "classnames";
 
-export default function Main() {
+interface Props {
+  mode: string;
+}
+
+export default function Main({ mode }: Props) {
   return (
     <section className={styles.main}>
       <div className={styles.intro}>
-        <p className={styles.intro__title}></p>
+        <p
+          className={classNames({
+            [styles.intro__title]: true,
+            [styles["intro__title__dark"]]: mode === "dark",
+          })}
+        ></p>
         <p className={styles.intro__description}>
           Me chamo Caio Mognatti, nasci em 1997, e comecei no mundo da promação
           em 2022. Sempre tive interesse na área de tecnologia, mas acabei

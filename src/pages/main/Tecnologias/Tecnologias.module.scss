@@ -30,8 +30,9 @@
   width: 25%;
   margin: 16px;
   border-radius: 15px;
-  transition: 1s;
+  transition: 250ms;
   background-color: $green-bg-color;
+  color: white;
   box-shadow: 10px 5px 1px rgba(0, 0, 0, 0.3);
 
   &__description {
@@ -39,16 +40,19 @@
     font-size: 19px;
   }
   &__dark {
-    transition: 1s;
+    transition: 250ms;
     background-color: $dark-gray;
     color: white;
   }
 }
 
 .item:hover {
-  transform: scale(1.07);
-  border: 1px solid black;
-  &__dark {
-    border: 1px solid $green-bg-color;
-  }
+  transform: scale(1.02);
+  color: $font-color;
+  border: 1px solid $background-color-dark;
+}
+
+.item__dark:hover {
+  color: $green-bg-color;
+  border: 1px solid $green-bg-color;
 }

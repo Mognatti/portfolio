@@ -2,6 +2,7 @@ import styles from "./Projetos.module.scss";
 import classNames from "classnames";
 import { SiTypescript, SiSass } from "react-icons/si";
 import { ImHtmlFive, ImCss3 } from "react-icons/im";
+import { FaReact } from "react-icons/fa";
 import AluroniThumb from "../../../../public/img/Aluroni_Preview.png";
 
 interface Props {
@@ -16,10 +17,10 @@ export default function Projetos({ mode }: Props) {
       description:
         "O projeto possui algumas ferramentas para alterar a ordem do cardápio de acordo com critérios estabelecidos pelo cliente, além de seprar os itens por uma label (massas, salada, etc..) e um buscador de itens.",
       madeWith: [
+        <FaReact size="20" />,
+        <ImHtmlFive size="20" />,
         <SiTypescript size="20" />,
         <SiSass size="20" />,
-        <ImHtmlFive size="20" />,
-        <ImCss3 size="20" />,
       ],
       preview: AluroniThumb,
     },
@@ -81,15 +82,19 @@ export default function Projetos({ mode }: Props) {
                     </span>
                   </p>
                   <p>{project.description}</p>
-                  <ul
-                    className={classNames({
-                      [styles.item__div__text__icons]: true,
-                      [styles["item__dark__div__text__icons"]]: mode === "dark",
-                    })}
-                  >
-                    {project.madeWith.map((icon) => (
-                      <li>{icon}</li>
-                    ))}
+                  <ul>
+                    <p
+                      className={classNames({
+                        [styles.item__div__text__icons]: true,
+                        [styles["item__dark__div__text__icons"]]:
+                          mode === "dark",
+                      })}
+                    >
+                      Tecnologias usadas:
+                      {project.madeWith.map((icon) => (
+                        <li>{icon}</li>
+                      ))}
+                    </p>
                   </ul>
                 </div>
                 <img

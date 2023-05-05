@@ -1,7 +1,7 @@
 import { ImHtmlFive, ImCss3 } from "react-icons/im";
 import { IoLogoGithub } from "react-icons/io";
 import { SiTypescript, SiJavascript, SiSass } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaNodeJs } from "react-icons/fa";
 import styles from "./Tecnologias.module.scss";
 import classNames from "classnames";
 
@@ -53,6 +53,12 @@ export default function Tecnologias({ mode }: Props) {
       description:
         "Utilizo o GitHub como ferramenta de controle de versão. Sou capaz de trabalhar com a equipe para transformar nossos 'commits' em 'pushes' e 'merges' :) ",
     },
+    {
+      nome: "NodeJs",
+      icon: <FaNodeJs size="40" />,
+      description:
+        "Ferramenta criada para possibilitar o uso do JavaScript server-side, sou capaz utiliza-la com o framework 'Express'",
+    },
   ];
 
   return (
@@ -67,35 +73,35 @@ export default function Tecnologias({ mode }: Props) {
       </div>
       <div>
         <ul className={styles.list}>
-          {tecnologias.map((tecnologia) => (
-            <li
-              key={tecnologia.nome}
-              className={classNames({
-                [styles.item]: true,
-                [styles["item__dark"]]: mode === "dark",
-              })}
-            >
-              {tecnologia.icon}
-
-              <p
+          {tecnologias.map((tecnologia) => {
+            return (
+              <li
+                key={tecnologia.nome}
                 className={classNames({
-                  [styles.item__name]: true,
-                  [styles["item__name__dark"]]: mode === "dark",
+                  [styles.item]: true,
+                  [styles["item__dark"]]: mode === "dark",
                 })}
               >
-                {tecnologia.nome}
-              </p>
-
-              <p
-                className={classNames({
-                  [styles.item__description]: true,
-                  [styles["item__description__dark"]]: mode === "dark",
-                })}
-              >
-                {tecnologia.description}
-              </p>
-            </li>
-          ))}
+                <p>{tecnologia.icon}</p>
+                <p
+                  className={classNames({
+                    [styles.item__name]: true,
+                    [styles["item__name__dark"]]: mode === "dark",
+                  })}
+                >
+                  {tecnologia.nome}
+                </p>
+                <p
+                  className={classNames({
+                    [styles.item__description]: true,
+                    [styles["item__description__dark"]]: mode === "dark",
+                  })}
+                >
+                  {tecnologia.description}
+                </p>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </section>

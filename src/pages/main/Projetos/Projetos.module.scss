@@ -40,6 +40,7 @@
   border-radius: 40px;
   box-shadow: 10px 5px 1px rgba(0, 0, 0, 0.3);
   text-align: justify;
+  color: white;
   &__div {
     width: 100%;
     display: grid;
@@ -50,20 +51,22 @@
       grid-row: 2;
       width: 75%;
       &__title {
-        color: white;
+        color: $font-color;
       }
       &__subtitle {
-        color: $font-color;
+        color: white;
       }
       &__icons {
         border-bottom: 1px solid $background-color;
         display: flex;
+        margin-top: 25%;
+
         li {
-          padding: 8px;
-          margin-top: 25%;
+          margin-bottom: 15px;
+          margin-left: 15px;
         }
         li:hover {
-          transition: 1s;
+          transition: 350ms;
           opacity: 0.3;
         }
       }
@@ -95,7 +98,11 @@
 }
 
 .item:hover {
-  transition: 1s;
+  transition: 250ms;
   border: 1px solid black;
   transform: scale(1.02);
+}
+
+.item__dark:hover {
+  border: 1px solid $green-bg-color;
 }
