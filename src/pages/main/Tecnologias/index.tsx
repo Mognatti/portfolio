@@ -21,19 +21,19 @@ export default function Tecnologias({ mode }: Props) {
       nome: "CSS",
       icon: <ImCss3 size="40" />,
       description:
-        "Realizei cursos de CSS e me peocuopo com a adequada estilização das aplicações que crio, insclusive aplicando Material Design.",
+        "Realizei cursos de CSS e me preocupo com a adequada estilização das aplicações que crio, aplicando, inclusive, Material Design.",
     },
     {
       nome: "Sass",
       icon: <SiSass size="40" />,
       description:
-        "Utilizo essa extenção o CSS em conjunto com o CSS modules para melhor estilizar e organizar as minhas aplicações. Além dele, ainda tenho conhecimento e prática com Styled Components.",
+        "Utilizo essa extensão do CSS em conjunto com o CSS modules para melhor estilizar e organizar as minhas aplicações. Além dele, ainda tenho conhecimento e prática com Styled Components.",
     },
     {
       nome: "JavaScript",
       icon: <SiJavascript size="40" />,
       description:
-        "Seja JS nativo ou através da biblioteca JSX, sou capaz de manipular o DOM para criar aplicações com comportamento interativo, priorizando a UX",
+        "Seja JS nativo ou através da biblioteca JSX, sou capaz de manipular o DOM para criar aplicações com comportamento interativo, priorizando a experiência do usuário (UX)",
     },
     {
       nome: "TypeScript",
@@ -45,7 +45,7 @@ export default function Tecnologias({ mode }: Props) {
       nome: "React",
       icon: <FaReact size="40" />,
       description:
-        "Principal ferramente que utilizo atualmente. Tenho domínio sobre as pricipais bibliotecas e posso aprender novas com facilidade.",
+        "Principal ferramenta que utilizo atualmente. Tenho domínio sobre as pricipais bibliotecas e posso aprender novas com facilidade.",
     },
     {
       nome: "GitHub",
@@ -57,7 +57,7 @@ export default function Tecnologias({ mode }: Props) {
       nome: "NodeJs",
       icon: <FaNodeJs size="40" />,
       description:
-        "Ferramenta criada para possibilitar o uso do JavaScript server-side, sou capaz utiliza-la com o framework 'Express'",
+        "Ferramenta criada para possibilitar o uso do JavaScript server-side, sou capaz utilizá-la com o framework 'Express'",
     },
   ];
 
