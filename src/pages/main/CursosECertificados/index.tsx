@@ -77,12 +77,10 @@ export default function CursosECertificados({ mode }: Props) {
 
   function addIndex(index: number) {
     index === certificados.length - 1 ? setIndex(0) : setIndex(index + 1);
-    console.log(index);
   }
 
   function subIndex(index: number) {
     index === 0 ? setIndex(certificados.length - 1) : setIndex(index - 1);
-    console.log(index);
   }
 
   return (
