@@ -1,7 +1,6 @@
 import styles from "./NavBar.module.scss";
 import classNames from "classnames";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
-import ColorTest from "./components/ColorTest";
 import Sticky from "./components/Sticky";
 import ScrollBack from "./components/ScrollBack";
 
@@ -20,26 +19,30 @@ export default function NavBar({ mode }: Props) {
       })}
     >
       <div className={styles.nav__title}>
-        <p>Bem Vindo!</p>
+        <p>Caio Mognatti</p>
       </div>
 
       <ul
         className={classNames({
           [styles.list]: true,
+          [styles["list__sticky"]]: Sticky(),
           [styles["list__dark"]]: mode === "dark",
+          [styles["list__dark__sticky"]]: Sticky() && mode === "dark",
         })}
       >
         <li>
           <a target="_blank" href="https://github.com/Mognatti">
-            <IoLogoGithub size="25" color={ColorTest(mode)} />
+            <IoLogoGithub size="25" />
           </a>
         </li>
         <li>
           <a target="_blank" href="https://www.linkedin.com/in/caio-mognatti/">
-            <IoLogoLinkedin size="25" color={ColorTest(mode)} />
+            <IoLogoLinkedin size="25" />
           </a>
         </li>
-        <ScrollBack mode={mode} />
+        <a>
+          <ScrollBack />
+        </a>
       </ul>
     </nav>
   );

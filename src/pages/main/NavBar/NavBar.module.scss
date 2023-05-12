@@ -19,7 +19,7 @@
   &__sticky {
     position: fixed;
     margin-top: -8px;
-    background-color: rgba(12, 12, 12, 0.2);
+    background-color: rgba(12, 12, 12);
     color: white;
   }
   &__dark {
@@ -28,7 +28,8 @@
     color: $background-color;
     &__sticky {
       position: fixed;
-      background-color: rgba(266, 266, 266, 0.2);
+      background-color: $background-color;
+      color: $font-color;
     }
   }
 }
@@ -36,6 +37,24 @@
 .list {
   display: inline-flex;
   text-align: justify;
+}
+
+.list a {
+  cursor: pointer;
+  transition: 350ms;
+  color: $font-color;
+}
+
+.list__sticky a {
+  color: $font-color-dark;
+}
+
+.list__dark a {
+  color: $green-bg-color;
+}
+
+.list__dark__sticky a {
+  color: $font-color;
 }
 
 .list li {
