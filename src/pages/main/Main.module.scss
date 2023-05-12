@@ -48,73 +48,33 @@
 
 @keyframes typing {
   6.5% {
-    content: "";
-  }
-  9% {
-    content: "S";
-  }
-  13.5% {
-    content: "So";
-  }
-  18% {
-    content: "Sot";
-  }
-  21.5% {
-    content: "Sotr";
-  }
-  26% {
-    content: "Sotre";
-  }
-  30.5% {
-    content: "Sotr";
-  }
-  35% {
-    content: "Sot";
-  }
-  39.5% {
-    content: "So";
-  }
-  44% {
-    content: "Sobr";
-  }
-
-  44.5% {
     content: "Sobre";
   }
 
-  49% {
+  15% {
     content: "Sobre ";
   }
-  53.5% {
+
+  20% {
     content: "Sobre m";
-  }
-  58% {
-    content: "Sobre mi";
-  }
-  62.5%,
-  70% {
-    content: "Sobre mim";
-  }
-  67% {
-    content: "Sobre mim";
-  }
-  71.5% {
-    content: "Sobre mim";
   }
 
-  76% {
-    content: "Sobre mim";
+  45% {
+    content: "Sobre mo";
   }
-  80.5%,
-  88% {
-    content: "Sobre mim";
-  }
-  85% {
+
+  50%,
+  100% {
     content: "Sobre m";
   }
-  95%,
-  100% {
-    content: "Sobr";
+
+  58%,
+  90% {
+    content: "Sobre mi";
+  }
+
+  85% {
+    content: "Sobre mim";
   }
 }
 
@@ -129,8 +89,8 @@
 }
 
 .intro__title::before {
-  content: "";
-  animation: typing 7s infinite;
+  content: "Sobre ";
+  animation: typing 3s infinite;
   border-bottom: 1px solid black;
 }
 

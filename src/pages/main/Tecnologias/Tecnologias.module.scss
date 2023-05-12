@@ -23,6 +23,7 @@
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
+  cursor: default;
 }
 
 .item {
@@ -41,19 +42,17 @@
     font-size: 19px;
   }
   &__dark {
-    transition: 250ms;
     background-color: $dark-gray;
     color: white;
   }
 }
 
 .item:hover {
-  transform: scale(1.02);
-  color: $font-color;
-  border: 1px solid $background-color-dark;
+  transition: 400ms;
+  border: 1px solid $green-bg-color;
 }
 
 .item__dark:hover {
-  color: $green-bg-color;
-  border: 1px solid $green-bg-color;
+  transition: 400ms;
+  border: 1px solid $background-color-dark;
 }

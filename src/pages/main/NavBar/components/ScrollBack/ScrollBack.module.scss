@@ -1,0 +1,9 @@
+@import "../../../../../styles/variables.scss";
+
+.button {
+  color: $background-color-dark;
+  cursor: pointer;
+  &__dark {
+    color: $background-color;
+  }
+}

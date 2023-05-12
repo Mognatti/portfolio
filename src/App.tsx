@@ -18,8 +18,7 @@ function App() {
         [styles["app__dark"]]: mode === "dark",
       })}
     >
-      <br />
-      <NavBar mode={mode} setMode={setMode} />
+      <NavBar mode={mode} />
       <DisplayMode mode={mode} setMode={setMode} />
       <Main mode={mode} />
       <Tecnologias mode={mode} />

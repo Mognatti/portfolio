@@ -15,7 +15,7 @@ export default function Projetos({ mode }: Props) {
       title: "Aluroni",
       subtitle: "Cardápio de uma cozinha italiana",
       description:
-        "O projeto possui algumas ferramentas para alterar a ordem do cardápio de acordo com critérios estabelecidos pelo cliente, além de seprar os itens por uma label (massas, salada, etc..) e um buscador de itens.",
+        "O projeto possui algumas ferramentas para alterar a ordem do cardápio de acordo com critérios estabelecidos pelo cliente, além de seprar os itens por uma label (massas, salada, etc..) e um buscador de itens. Para a melhor navegação pela aplicação, foi implementada a biblioteca 'React Router'",
       madeWith: [
         <FaReact size="20" />,
         <ImHtmlFive size="20" />,
