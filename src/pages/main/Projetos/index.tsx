@@ -83,7 +83,7 @@ export default function Projetos({ mode }: Props) {
                     </span>
                   </p>
                   <p>{project.description}</p>
-                  <ul>
+                  <ul className={styles.item__div__text__list}>
                     <p
                       className={classNames({
                         [styles.item__div__text__icons]: true,

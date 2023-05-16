@@ -65,7 +65,6 @@
   cursor: pointer;
   opacity: 0.6;
 }
-
 .move__left:hover,
 .move__right:hover {
   transition: 350ms;
@@ -75,4 +74,25 @@
 
 * {
   text-decoration: none;
+}
+
+@media (max-width: 1245px) {
+  .list {
+    padding: 8px;
+    li {
+      width: 90%;
+      padding: 8px;
+    }
+    img {
+      padding: 0px;
+    }
+    p {
+      display: none;
+      border: none;
+    }
+  }
+  .move__left,
+  .move__right {
+    display: none;
+  }
 }

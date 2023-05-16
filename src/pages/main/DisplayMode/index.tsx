@@ -14,18 +14,20 @@ export default function DisplayMode({ mode, setMode }: Props) {
   };
 
   return (
-    <button
-      className={classNames({
-        [styles.mode]: true,
-        [styles["mode__dark"]]: mode == "dark",
-      })}
-      onClick={() => handleClickMode()}
-    >
-      {mode === "dark" ? (
-        <MdDarkMode size="20" className={styles.mode__icon__dark} />
-      ) : (
-        <MdLightMode size="20" className={styles.mode__icon} />
-      )}
-    </button>
+    <div className={styles.mode__container}>
+      <button
+        className={classNames({
+          [styles.mode]: true,
+          [styles["mode__dark"]]: mode == "dark",
+        })}
+        onClick={() => handleClickMode()}
+      >
+        {mode === "dark" ? (
+          <MdDarkMode size="20" className={styles.mode__icon__dark} />
+        ) : (
+          <MdLightMode size="20" className={styles.mode__icon} />
+        )}
+      </button>
+    </div>
   );
 }
