@@ -2,6 +2,7 @@ import styles from "./Main.module.scss";
 import classNames from "classnames";
 import photo from "../../assets/foto_pessoal.jpg";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
+import { SiGmail } from "react-icons/si";
 
 interface Props {
   mode: string;
@@ -24,6 +25,15 @@ export default function Main({ mode }: Props) {
         className={classNames({
           [styles.linkedin]: true,
           [styles["linkedin__dark"]]: mode === "dark",
+        })}
+      />
+    </a>,
+    <a target="_blank" href="mailto:caiocsm97@gmail.com">
+      <SiGmail
+        size="30"
+        className={classNames({
+          [styles.email]: true,
+          [styles["email__dark"]]: mode === "dark",
         })}
       />
     </a>,

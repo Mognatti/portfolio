@@ -104,7 +104,9 @@
   border-bottom: 1px solid $green-bg-color;
 }
 
-.git {
+.git,
+.linkedin,
+.email {
   transition: 250ms;
   color: black;
   cursor: pointer;
@@ -114,22 +116,13 @@
 }
 
 .git:hover {
-  color: $green-bg-color;
-}
-
-.linkedin {
-  transition: 250ms;
-  color: black;
-  cursor: pointer;
-  &__dark {
-    color: white;
-  }
+  color: #858585;
 }
 
 .linkedin:hover {
   color: #0e76a8;
 }
 
-.git__dark:hover {
-  color: $green-bg-color;
+.email:hover {
+  color: #bb001b;
 }
