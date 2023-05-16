@@ -9,6 +9,7 @@ body {
   font-size: 100%;
   vertical-align: baseline;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 article,

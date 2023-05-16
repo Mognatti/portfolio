@@ -48,9 +48,3 @@
 .mode__dark:hover {
   border: 1px solid $green-bg-color;
 }
-
-@media only screen and (max-device-width: 900px) {
-  .mode {
-    width: 100%;
-  }
-}

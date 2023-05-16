@@ -39,6 +39,7 @@ export default function Projetos({ mode }: Props) {
       <ul className={styles.list}>
         {projects.map((project) => (
           <a
+            key={project.title}
             className={classNames({
               [styles.link]: true,
               [styles["link__dark"]]: mode === "dark",
@@ -92,7 +93,7 @@ export default function Projetos({ mode }: Props) {
                     >
                       Tecnologias usadas:
                       {project.madeWith.map((icon) => (
-                        <li>{icon}</li>
+                        <li key={Math.random()}>{icon}</li>
                       ))}
                     </p>
                   </ul>

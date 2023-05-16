@@ -62,6 +62,7 @@ export default function Main({ mode }: Props) {
         <div className={styles.about__description__icons}>
           {contatos.map((icon) => (
             <span
+              key={Math.random()}
               className={classNames({
                 [styles.about__description__icon]: true,
               })}
