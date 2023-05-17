@@ -43,7 +43,7 @@ export const tecnologias = [
     nome: "React",
     icon: <FaReact size="40" />,
     description:
-      "Principal ferramenta que utilizo atualmente. Tenho domínio sobre as pricipais bibliotecas e posso aprender novas com facilidade.",
+      "Principal ferramenta que utilizo atualmente. Sou capaz de realizar testes em Jest, tenho conhecimento sobre diversas bibliotecas e posso aprender novas com facilidade.",
   },
   {
     nome: "GitHub",
