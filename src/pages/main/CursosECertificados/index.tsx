@@ -12,11 +12,15 @@ export default function CursosECertificados({ mode }: Props) {
   const list = useRef<HTMLUListElement>(null);
 
   const scrollLeft = () => {
-    list.current?.scrollBy({ left: -1470, behavior: "smooth" });
+    list.current?.scrollLeft == 0
+      ? list.current?.scrollBy({ left: +1470, behavior: "smooth" })
+      : list.current?.scrollBy({ left: -1470, behavior: "smooth" });
   };
 
   const scrollRight = () => {
-    list.current?.scrollBy({ left: +1470, behavior: "smooth" });
+    list.current?.scrollLeft === 4319
+      ? list.current?.scrollBy({ left: -1470, behavior: "smooth" })
+      : list.current?.scrollBy({ left: +1470, behavior: "smooth" });
   };
 
   return (

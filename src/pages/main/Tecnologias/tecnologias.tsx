@@ -1,6 +1,11 @@
 import { ImHtmlFive, ImCss3 } from "react-icons/im";
 import { IoLogoGithub } from "react-icons/io";
-import { SiTypescript, SiJavascript, SiSass } from "react-icons/si";
+import {
+  SiTypescript,
+  SiJavascript,
+  SiSass,
+  SiPostgresql,
+} from "react-icons/si";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 
 export const tecnologias = [
@@ -51,5 +56,11 @@ export const tecnologias = [
     icon: <FaNodeJs size="40" />,
     description:
       "Ferramenta criada para possibilitar o uso do JavaScript server-side, sou capaz utilizá-la com o framework 'Express'",
+  },
+  {
+    nome: "PostgreSQL",
+    icon: <SiPostgresql size="40" />,
+    description:
+      "Possuo conhecimento básico acerca desse Sistema Gerenciador de Bancos de Dados (SGBD) relacional que permite armazenar, consultar e manipular dados de inúmeras formas.",
   },
 ];
