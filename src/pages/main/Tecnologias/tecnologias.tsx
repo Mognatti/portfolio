@@ -57,10 +57,4 @@ export const tecnologias = [
     description:
       "Ferramenta criada para possibilitar o uso do JavaScript server-side, sou capaz utilizá-la com o framework 'Express'",
   },
-  {
-    nome: "PostgreSQL",
-    icon: <SiPostgresql size="40" />,
-    description:
-      "Possuo conhecimento básico acerca desse Sistema Gerenciador de Bancos de Dados (SGBD) relacional que permite armazenar, consultar e manipular dados de inúmeras formas.",
-  },
 ];
