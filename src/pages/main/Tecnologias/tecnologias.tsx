@@ -1,11 +1,6 @@
 import { ImHtmlFive, ImCss3 } from "react-icons/im";
 import { IoLogoGithub } from "react-icons/io";
-import {
-  SiTypescript,
-  SiJavascript,
-  SiSass,
-  SiPostgresql,
-} from "react-icons/si";
+import { SiTypescript, SiJavascript, SiSass } from "react-icons/si";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 
 export const tecnologias = [
