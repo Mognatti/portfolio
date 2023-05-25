@@ -18,10 +18,21 @@
   }
 }
 
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
 .link {
   color: $font-color;
   text-decoration: none;
-  width: 95%;
+  width: 90%;
+  height: fit-content;
   padding: 15px;
   &__dark {
     color: $font-color-dark;
@@ -29,16 +40,8 @@
   }
 }
 
-.list {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
-}
-
 .item {
+  display: flex;
   background-color: $green-bg-color;
   padding: 36px;
   border-radius: 40px;
@@ -47,29 +50,26 @@
   color: white;
   &__div {
     width: 100%;
-    display: grid;
-    grid-template-columns: 2;
+    display: flex;
     &__text {
       font-size: 20px;
-      grid-column: 1;
-      grid-row: 2;
-      width: 75%;
+      padding-right: 10%;
       &__title {
         color: $font-color;
       }
       &__subtitle {
         color: white;
       }
-      &__list {
-        padding: 0;
-      }
-      &__icons {
+      &__tecnologias {
         border-bottom: 1px solid $background-color;
-        display: flex;
-        width: 100%;
-        margin-top: 25%;
+        width: 50%;
+        padding: 15px;
         margin-left: 0;
-        li {
+      }
+      &__list {
+        display: flex;
+        padding: 0;
+        &__icons {
           margin-bottom: 15px;
           margin-left: 15px;
         }
@@ -77,8 +77,7 @@
     }
     &__img {
       width: 500px;
-      grid-column: 2;
-      grid-row: 2;
+      align-self: center;
       border-radius: 50px;
       box-shadow: 15px 10px 1px rgba(0, 0, 0, 0.3);
     }
@@ -101,6 +100,13 @@
   }
 }
 
+.git-link {
+  color: white;
+}
+.git-link:hover {
+  transition: 350ms;
+  opacity: 0.3;
+}
 .item:hover {
   transition: 250ms;
   border: 1px solid black;
@@ -132,6 +138,7 @@
         order: 2;
         width: 100%;
         margin-top: 15px;
+        padding-right: 0;
       }
     }
   }
@@ -154,6 +161,7 @@
       &__text {
         margin-top: 15px;
         order: 2;
+        padding-right: 0;
       }
     }
   }
