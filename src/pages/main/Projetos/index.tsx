@@ -1,9 +1,10 @@
 import styles from "./Projetos.module.scss";
 import classNames from "classnames";
-import { SiTypescript, SiSass } from "react-icons/si";
-import { ImHtmlFive } from "react-icons/im";
+import { SiTypescript, SiSass, SiJest } from "react-icons/si";
+import { ImHtmlFive, ImCss3 } from "react-icons/im";
 import { FaReact } from "react-icons/fa";
 import AluroniThumb from "../../../../public/img/Aluroni_Preview.png";
+import AmigoSecretoThumb from "../../../../public/img/Amigo_Secreto_Preview.png";
 
 interface Props {
   mode: string;
@@ -19,10 +20,26 @@ export default function Projetos({ mode }: Props) {
       madeWith: [
         <FaReact size="20" />,
         <ImHtmlFive size="20" />,
-        <SiTypescript size="20" />,
         <SiSass size="20" />,
+        <SiTypescript size="20" />,
       ],
+      link: "https://aluroni-menu.vercel.app/",
       preview: AluroniThumb,
+    },
+    {
+      title: "Sorteador amigo de secreto",
+      subtitle: "Randomiza uma lista e correlaciona os elementos",
+      description:
+        "A aplicação foi criada em React utilizando o método TDD (Test Driven Development) através da combinação da biblioteca Jest e da testing library do react para garantir o adequado funcionamento da mesma. Além disso, as bibliotecas react-router-dom e recoil foram utilizadas. Com essa aplicação é possível criar uma lista de participantes de um sorteio e formar uma relação entre um indivíduo (sorteador) com outro (sorteado) de maneira que é impossível realizar o sorteio caso não seja atingido o número mínimo de participantes e que, de nenhuma forma, será possível que mais de um participante tire a mesma pessoa e nem ele mesmo.",
+      madeWith: [
+        <FaReact size="20" />,
+        <ImHtmlFive size="20" />,
+        <ImCss3 size="20" />,
+        <SiTypescript size="20" />,
+        <SiJest size="20" />,
+      ],
+      link: "https://amigo-secreto-alura.vercel.app/ ",
+      preview: AmigoSecretoThumb,
     },
   ];
 
@@ -45,7 +62,7 @@ export default function Projetos({ mode }: Props) {
               [styles["link__dark"]]: mode === "dark",
             })}
             target="_blank"
-            href="https://aluroni-menu.vercel.app/"
+            href={project.link}
           >
             <li
               className={classNames({

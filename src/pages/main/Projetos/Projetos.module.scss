@@ -22,6 +22,7 @@
   color: $font-color;
   text-decoration: none;
   width: 95%;
+  padding: 15px;
   &__dark {
     color: $font-color-dark;
     text-decoration: none;
@@ -30,6 +31,7 @@
 
 .list {
   display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 0;
   align-items: center;
