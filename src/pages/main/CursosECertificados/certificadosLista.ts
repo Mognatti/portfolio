@@ -8,6 +8,8 @@ import ReactFull from "../../../assets/REACT_COMECE_SEU_PROJETO_FULL_STACK.png";
 import ReactJs from "../../../assets/REACT_DESENVOLVENDO_COM_JAVASCRIPT.png";
 import ReactEst from "../../../assets/REACT_LIDANDO_COM_ARQUIVOS_ESTÁTICOS.png";
 import TsPartOne from "../../../assets/TYPESCRIPT_PARTE_1_EVOLUINDO_SEU_JAVASCRIPT.png";
+import Responsividade from "../../../assets/certificado_HTML_e_CSS_TRABALHANDO_COM_RESPONSIVIDADE.png";
+import ReactTestComponentes from "../../../assets/certificado_React_Testando_Os_seus_Componentes.png";
 
 export const certificados = [
   {
@@ -59,5 +61,15 @@ export const certificados = [
     nome: "TypeScript I: Evoluindo seu JavaScript",
     link: "https://cursos.alura.com.br/certificate/61f7e00d-de3e-47ad-82a7-81e95e434a37",
     img: TsPartOne,
+  },
+  {
+    nome: "HTML e CSS: Trabalhando com resposividade e publicação de projetos",
+    link: "https://cursos.alura.com.br/certificate/44f0b1c0-f8db-4640-bf77-0d9ac74fc18b",
+    img: Responsividade,
+  },
+  {
+    nome: "REACT: Testando seus componentes",
+    link: "https://cursos.alura.com.br/certificate/fa68fa37-1501-448c-82cd-74e49bea9626",
+    img: ReactTestComponentes,
   },
 ];
