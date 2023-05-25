@@ -3,7 +3,6 @@ import { ImHtmlFive, ImCss3 } from "react-icons/im";
 import { FaReact } from "react-icons/fa";
 import AluroniThumb from "../../../../public/img/Aluroni_Preview.png";
 import AmigoSecretoThumb from "../../../../public/img/Amigo_Secreto_Preview.png";
-import { IoLogoGithub } from "react-icons/io";
 
 export const projects = [
   {
