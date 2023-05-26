@@ -13,14 +13,26 @@ export default function CursosECertificados({ mode }: Props) {
 
   const scrollLeft = () => {
     list.current?.scrollLeft == 0
-      ? list.current?.scrollBy({ left: +1470, behavior: "smooth" })
-      : list.current?.scrollBy({ left: -1470, behavior: "smooth" });
+      ? list.current?.scrollBy({
+          left: +list.current.scrollWidth / certificados.length,
+          behavior: "smooth",
+        })
+      : list.current?.scrollBy({
+          left: -list.current.scrollWidth / certificados.length,
+          behavior: "smooth",
+        });
   };
 
   const scrollRight = () => {
-    list.current?.scrollLeft === 4319
-      ? list.current?.scrollBy({ left: -1470, behavior: "smooth" })
-      : list.current?.scrollBy({ left: +1470, behavior: "smooth" });
+    list.current!.scrollLeft > list.current!.scrollWidth - 1420
+      ? list.current?.scrollBy({
+          left: -list.current.scrollWidth / certificados.length,
+          behavior: "smooth",
+        })
+      : list.current?.scrollBy({
+          left: +list.current.scrollWidth / certificados.length,
+          behavior: "smooth",
+        });
   };
 
   return (
