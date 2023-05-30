@@ -7,6 +7,7 @@ import classNames from "classnames";
 import NavBar from "./pages/main/NavBar";
 import Projetos from "./pages/main/Projetos";
 import CursosECertificados from "./pages/main/CursosECertificados";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [mode, setMode] = useState("ligth");
@@ -18,6 +19,7 @@ function App() {
         [styles["app__dark"]]: mode === "dark",
       })}
     >
+      <Analytics />
       <NavBar mode={mode} />
       <DisplayMode mode={mode} setMode={setMode} />
       <Main mode={mode} />
