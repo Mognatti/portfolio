@@ -28,23 +28,25 @@ export default function Tecnologias({ mode }: Props) {
                 [styles["item__dark"]]: mode === "dark",
               })}
             >
-              <p>{tecnologia.icon}</p>
-              <p
-                className={classNames({
-                  [styles.item__name]: true,
-                  [styles["item__name__dark"]]: mode === "dark",
-                })}
-              >
-                {tecnologia.nome}
-              </p>
-              <p
-                className={classNames({
-                  [styles.item__description]: true,
-                  [styles["item__description__dark"]]: mode === "dark",
-                })}
-              >
-                {tecnologia.description}
-              </p>
+              <a className={styles.link} target="_blank" href={tecnologia.link}>
+                <p>{tecnologia.icon}</p>
+                <p
+                  className={classNames({
+                    [styles.item__name]: true,
+                    [styles["item__name__dark"]]: mode === "dark",
+                  })}
+                >
+                  {tecnologia.nome}
+                </p>
+                <p
+                  className={classNames({
+                    [styles.item__description]: true,
+                    [styles["item__description__dark"]]: mode === "dark",
+                  })}
+                >
+                  {tecnologia.description}
+                </p>
+              </a>
             </li>
           );
         })}
