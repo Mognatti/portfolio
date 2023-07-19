@@ -22,85 +22,32 @@ export default function Projetos({ mode }: Props) {
         {projects.map((project) => (
           <a
             key={project.title}
-            className={classNames({
-              [styles.link]: true,
-              [styles["link__dark"]]: mode === "dark",
-            })}
-            target="_blank"
+            className={styles.card}
             href={project.linkHost}
+            target="_blank"
           >
-            <li
-              className={classNames({
-                [styles.item]: true,
-                [styles["item__dark"]]: mode == "dark",
-              })}
-            >
-              <div
-                className={classNames({
-                  [styles.item__div]: true,
-                  [styles["item__dark__div"]]: mode == "dark",
-                })}
-              >
-                <div
-                  className={classNames({
-                    [styles.item__div__text]: true,
-                    [styles["item__dark__div__text"]]: mode === "dark",
-                  })}
-                >
-                  <p
-                    className={classNames({
-                      [styles.item__div__text__title]: true,
-                      [styles["item__dark__div__text__title"]]: mode === "dark",
-                    })}
-                  >
-                    {project.title}
-                    <span
-                      className={classNames({
-                        [styles.item__div__text__subtitle]: true,
-                        [styles["item__dark__div__text__subtitle"]]:
-                          mode === "dark",
-                      })}
-                    >
-                      {" - " + project.subtitle}
-                    </span>
-                  </p>
-                  <div>
-                    <p>{project.description}</p>
-                    <p className={styles.item__div__text__tecnologias}>
-                      Tecnologias usadas:
-                    </p>
-                    <ul className={styles.item__div__text__list}>
-                      {project.madeWith.map((icon) => (
-                        <li
-                          key={Math.random()}
-                          className={classNames({
-                            [styles.item__div__text__list__icons]: true,
-                            [styles["item__dark__div__text__icons"]]:
-                              mode === "dark",
-                          })}
-                        >
-                          {icon}
-                        </li>
-                      ))}
-                      <a
-                        href={project.linkProjeto}
-                        target="_blank"
-                        className={styles["git-link"]}
-                      >
-                        <li className={styles.item__div__text__list__icons}>
-                          <IoLogoGithub size="20" />
-                        </li>
-                      </a>
-                    </ul>
-                  </div>
-                </div>
-                <img
-                  className={styles.item__div__img}
-                  src={project.preview}
-                  alt="Thumb do Projeto"
-                ></img>
+            <div className={styles.image}>
+              <img src={project.preview} />
+            </div>
+            <div className={styles.details}>
+              <div className={styles.center}>
+                <h4>
+                  {project.title}
+                  <span> - {project.subtitle}</span>
+                </h4>
+                <p>{project.description}</p>
+                <ul>
+                  {project.madeWith.map((icon) => (
+                    <li key={icon.key}>{icon}</li>
+                  ))}
+                  <li>
+                    <a href={project.linkProjeto} target="_blank">
+                      <IoLogoGithub className={styles.git} size="20" />
+                    </a>
+                  </li>
+                </ul>
               </div>
-            </li>
+            </div>
           </a>
         ))}
       </ul>

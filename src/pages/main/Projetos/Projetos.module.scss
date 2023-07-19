@@ -1,165 +1,118 @@
 @import "../../../styles/variables.scss";
 
-.container {
-  padding: 18px;
-}
-
 .title {
   margin-left: 20%;
   margin-right: 20%;
   text-align: center;
   padding: 8px;
-  font-size: $font-size-title;
+  font-size: 28px;
   border-bottom: 1px solid $background-color-dark;
   &__dark {
     background-color: $background-color-dark;
-    color: $font-color-dark;
+    color: #d8d8d8;
     border-bottom: 1px solid $green-bg-color;
   }
 }
 
 .list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  width: 100%;
+  padding: 0;
+}
+
+.card {
+  text-decoration: none;
+  color: $font-color;
+  width: 550px;
+  height: 283px;
+  box-shadow: 0 0 10px 0 black;
+  transition: 350ms;
+}
+.card:hover {
+  box-shadow: 0 0 20px 1px black;
+}
+.card .image {
   width: 100%;
   height: 100%;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
 }
-
-.link {
-  color: $font-color;
-  text-decoration: none;
-  width: 90%;
-  height: fit-content;
-  padding: 15px;
-  &__dark {
-    color: $font-color-dark;
-    text-decoration: none;
-  }
+.card .image img {
+  width: 100%;
+  transition: 0.5s;
 }
-
-.item {
-  display: flex;
-  background-color: $green-bg-color;
-  padding: 36px;
-  border-radius: 40px;
-  box-shadow: 10px 5px 1px rgba(0, 0, 0, 0.3);
+.card:hover .image img {
+  opacity: 0.5;
+  transform: translateX(30%);
+}
+.card .details {
+  margin-top: -283px;
+  width: 85%;
+  height: 283px;
+  background: $green-bg-color;
+  transition: 0.5s;
+  transform-origin: left;
+  transform: perspective(2000px) rotateY(-90deg);
+}
+.card:hover .details {
+  transform: perspective(2000px) rotateY(0deg);
+}
+.card .details .center {
+  padding: 20px;
   text-align: justify;
-  color: white;
-  &__div {
-    width: 100%;
-    display: flex;
-    &__text {
-      font-size: 20px;
-      padding-right: 10%;
-      &__title {
-        color: $font-color;
-      }
-      &__subtitle {
-        color: white;
-      }
-      &__tecnologias {
-        border-bottom: 1px solid $background-color;
-        width: 50%;
-        padding: 15px;
-        margin-left: 0;
-      }
-      &__list {
-        display: flex;
-        padding: 0;
-        &__icons {
-          margin-bottom: 15px;
-          margin-left: 15px;
-        }
-      }
-    }
-    &__img {
-      width: 500px;
-      align-self: center;
-      border-radius: 50px;
-      box-shadow: 15px 10px 1px rgba(0, 0, 0, 0.3);
-    }
-  }
-  &__dark {
-    background-color: $dark-gray;
-    &__div {
-      &__text {
-        &__title {
-          color: $green-bg-color;
-        }
-        &__subtitle {
-          color: $font-color-dark;
-        }
-      }
-    }
-  }
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.card .details .center h4 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 20px;
 }
 
-.git-link {
-  color: white;
+.card .details .center p {
+  padding: 0;
+  color: $font-color;
+  font-size: 1em;
 }
-.git-link:hover {
+.card .details .center ul {
+  margin: 20px auto 0;
+  padding: 0;
+  display: table;
+}
+.card .details .center ul li {
+  list-style: none;
+  margin: 0 5px;
+  float: left;
+}
+.card:hover .git {
+  animation: test 700ms linear;
+}
+.git {
+  color: $dark-gray;
   transition: 350ms;
-  opacity: 0.3;
-}
-.item:hover {
-  transition: 250ms;
-  border: 1px solid black;
-  transform: scale(1.02);
-}
-
-.item__dark:hover {
-  border: 1px solid $green-bg-color;
-}
-
-@media (max-width: 1074px) {
-  .link {
-    width: 70%;
-  }
-
-  .item {
-    &__div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      &__img {
-        order: 1;
-        width: 100%;
-        height: 50%;
-        margin-bottom: 15px;
-      }
-      &__text {
-        order: 2;
-        width: 100%;
-        margin-top: 15px;
-        padding-right: 0;
-      }
-    }
+  &:hover {
+    transform: scale(1.3);
+    opacity: 0.7;
   }
 }
 
-@media (max-width: 818px) {
-  .link {
-    width: 100%;
+@keyframes test {
+  0% {
+    transform: scale(1.5);
   }
-  .item {
-    &__div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      &__img {
-        order: 1;
-        margin-bottom: 15px;
-      }
-      &__text {
-        margin-top: 15px;
-        order: 2;
-        padding-right: 0;
-      }
-    }
+  30% {
+    transform: none;
+  }
+  65% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: none;
   }
 }
