@@ -31,7 +31,7 @@ export const projects = [
     title: "Sorteador amigo de secreto",
     subtitle: "Relação entre listas",
     description:
-      " Com essa aplicação é possível criar uma lista de participantes de um sorteio e formar uma relação entre um indivíduo (sorteador) com outro (sorteado) de maneira que é impossível realizar o sorteio caso não seja atingido o número mínimo de participantes e que, de nenhuma forma, será possível que mais de um participante tire a mesma pessoa e nem ele mesmo. A aplicação foi criada utilizando o método TDD (Test Driven Development) através da combinação da biblioteca Jest e da testing library do react. Além disso, as bibliotecas react-router-dom e recoil foram utilizadas.",
+      "Com essa aplicação é possível criar uma lista de participantes de um sorteio de maneira que é impossível realizar o sorteio caso não seja atingido o número mínimo de participantes e que, de nenhuma forma, será possível que mais de um participante tire a mesma pessoa e nem ele mesmo. A aplicação foi criada utilizando o método TDD (Test Driven Development) através da combinação da biblioteca Jest e da testing library do react. Além disso, as bibliotecas react-router-dom e recoil foram utilizadas.",
     madeWith: [
       <FaReact key="react-icon" size="20" />,
       <ImHtmlFive key="html-icon" size="20" />,

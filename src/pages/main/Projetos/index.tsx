@@ -30,7 +30,12 @@ export default function Projetos({ mode }: Props) {
               <img src={project.preview} />
             </div>
             <div className={styles.details}>
-              <div className={styles.center}>
+              <div
+                className={classNames({
+                  [styles.center]: true,
+                  [styles.center__dark]: mode === "dark",
+                })}
+              >
                 <h4>
                   {project.title}
                   <span> - {project.subtitle}</span>
@@ -42,7 +47,13 @@ export default function Projetos({ mode }: Props) {
                   ))}
                   <li>
                     <a href={project.linkProjeto} target="_blank">
-                      <IoLogoGithub className={styles.git} size="20" />
+                      <IoLogoGithub
+                        className={classNames({
+                          [styles.git]: true,
+                          [styles.git__dark]: mode === "dark",
+                        })}
+                        size="20"
+                      />
                     </a>
                   </li>
                 </ul>
@@ -54,3 +65,4 @@ export default function Projetos({ mode }: Props) {
     </section>
   );
 }
+0;
