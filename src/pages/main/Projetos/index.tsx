@@ -65,4 +65,3 @@ export default function Projetos({ mode }: Props) {
     </section>
   );
 }
-0;

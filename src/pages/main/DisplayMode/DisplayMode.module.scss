@@ -1,17 +1,21 @@
 @import "../../../styles/variables.scss";
 .mode__container {
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
+  width: 100%;
 }
-
+.button__container {
+  display: flex;
+  justify-content: center;
+  width: 12%;
+}
 .mode {
   display: flex;
   margin-top: 8px;
-  margin-right: 5%;
   justify-content: right;
   background-color: transparent;
   padding: 8px;
-  width: 6%;
+  width: 50%;
   border-radius: 15px;
   border: 1px solid $green-bg-color;
   box-shadow: 10px 5px 1px rgba(0, 0, 0, 0.3);
