@@ -22,6 +22,10 @@
   gap: 2em;
   width: 100%;
   padding: 0;
+  @media (max-width: 800px) {
+    gap: 18em;
+    margin-top: 18em;
+  }
 }
 
 .card {
@@ -31,7 +35,16 @@
   height: 283px;
   box-shadow: 0 0 10px 0 black;
   transition: 350ms;
+  @media (max-width: 550px) {
+    width: 400px;
+    height: 200px;
+  }
+  @media (max-width: 400px) {
+    width: 300px;
+    height: 150px;
+  }
 }
+
 .card:hover {
   box-shadow: 0 0 20px 1px black;
 }
@@ -47,6 +60,9 @@
 .card:hover .image img {
   opacity: 0.5;
   transform: translateX(30%);
+  @media (max-width: 800px) {
+    transform: translateX(0%);
+  }
 }
 .card .details {
   margin-top: -283px;
@@ -56,6 +72,12 @@
   transition: 0.5s;
   transform-origin: left;
   transform: perspective(2000px) rotateY(-90deg);
+  @media (max-width: 800px) {
+    margin-top: -350px;
+    width: 100%;
+    height: fit-content;
+    transform: perspective(2000px) rotateY(0deg);
+  }
 }
 .card:hover .details {
   transform: perspective(2000px) rotateY(0deg);
