@@ -41,7 +41,7 @@ export default function Projetos({ mode }: Props) {
                   <span> - {project.subtitle}</span>
                 </h4>
                 <p>{project.description}</p>
-                <ul>
+                <ul className={styles.icon__list}>
                   {project.madeWith.map((icon) => (
                     <li key={icon.key}>{icon}</li>
                   ))}
