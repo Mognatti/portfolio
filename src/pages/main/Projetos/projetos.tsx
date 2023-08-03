@@ -16,7 +16,7 @@ export const projects = [
     title: "Aluroni",
     subtitle: "Cardápio de uma cozinha italiana",
     description:
-      "O projeto possui algumas ferramentas para alterar a ordem do cardápio de acordo com critérios estabelecidos pelo cliente, além de seprar os itens por uma label (massas, salada, etc..) e um buscador de itens. Para a melhor navegação pela aplicação, foi implementada a biblioteca 'React Router'",
+      "O projeto possui algumas ferramentas para alterar a ordem do cardápio de acordo com critérios estabelecidos pelo cliente, além de filtrar os itens por categoria ou texto. Para a melhor navegação pela aplicação, foi implementada a biblioteca 'React Router'",
     madeWith: [
       <FaReact key="react-icon" size="20" />,
       <ImHtmlFive key="html-icon" size="20" />,
@@ -31,7 +31,7 @@ export const projects = [
     title: "Sorteador amigo de secreto",
     subtitle: "Relação entre listas",
     description:
-      "Com essa aplicação é possível criar uma lista de participantes de um sorteio de maneira que é impossível realizar o sorteio caso não seja atingido o número mínimo de participantes e que, de nenhuma forma, será possível que mais de um participante tire a mesma pessoa e nem ele mesmo. A aplicação foi criada utilizando o método TDD (Test Driven Development) através da combinação da biblioteca Jest e da testing library do react. Além disso, as bibliotecas react-router-dom e recoil foram utilizadas.",
+      "Permite criar uma lista de participantes de um sorteio, sendo impossível realizar o mesmo caso não seja atingido o número mínimo de participantes e nem que mais de um participante tire a mesma pessoa e ou ele mesmo. A aplicação foi criada utilizando TDD (Test Driven Development) com a biblioteca Jest.",
     madeWith: [
       <FaReact key="react-icon" size="20" />,
       <ImHtmlFive key="html-icon" size="20" />,
