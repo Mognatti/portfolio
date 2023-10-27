@@ -31,8 +31,8 @@
     color: $background-color;
     &__sticky {
       position: fixed;
-      background-color: $background-color;
-      color: $font-color;
+      background-color: $dark-gray;
+      color: $font-color-dark;
     }
   }
 }
@@ -41,7 +41,7 @@
   display: flex;
   justify-content: end;
   flex-direction: row;
-  margin-right: 2%;
+  margin-right: 2.5%;
   align-items: center;
   width: 100%;
 }
@@ -74,7 +74,7 @@
 }
 
 .list__dark__sticky a {
-  color: $font-color;
+  color: $green-bg-color;
 }
 
 @media (max-width: 1552px) {

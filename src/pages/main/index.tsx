@@ -10,7 +10,7 @@ interface Props {
 
 export default function Main({ mode }: Props) {
   const contatos = [
-    <a href="https://github.com/Mognatti" target="_blank">
+    <a href="https://github.com/Mognatti" target="_blank" key="github-contato">
       <IoLogoGithub
         size="30"
         className={classNames({
@@ -19,7 +19,11 @@ export default function Main({ mode }: Props) {
         })}
       />
     </a>,
-    <a target="_blank" href="https://www.linkedin.com/in/caio-mognatti/">
+    <a
+      target="_blank"
+      href="https://www.linkedin.com/in/caio-mognatti/"
+      key="linkedin-contato"
+    >
       <IoLogoLinkedin
         size="30"
         className={classNames({
@@ -28,7 +32,7 @@ export default function Main({ mode }: Props) {
         })}
       />
     </a>,
-    <a target="_blank" href="mailto:caiocsm97@gmail.com">
+    <a target="_blank" href="mailto:caiocsm97@gmail.com" key="email-contato">
       <SiGmail
         size="30"
         className={classNames({
