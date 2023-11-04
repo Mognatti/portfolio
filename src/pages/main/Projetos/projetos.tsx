@@ -55,7 +55,7 @@ export const projects = [
       <SiStyledcomponents key="styled-components-icon" size="25" />,
       <SiTypescript key="ts-icon" size="20" />,
     ],
-    linkHost: "https://bit.ly/diegorenatopersonal",
+    linkHost: "http://diegorenatopersonal.com.br/",
     linkProjeto: "https://github.com/Mognatti/diego-renato-personal",
     preview: DiegoThumb,
   },
