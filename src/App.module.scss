@@ -13,3 +13,13 @@
     background-color: $background-color-dark;
   }
 }
+
+::-webkit-scrollbar {
+  background: $dark-gray;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $green-bg-color;
+  border-radius: 8px;
+}
