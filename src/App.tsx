@@ -1,7 +1,6 @@
 import Main from "./pages/main";
 import Tecnologias from "./pages/main/Tecnologias";
 import { useState } from "react";
-import DisplayMode from "./pages/main/DisplayMode";
 import styles from "./App.module.scss";
 import classNames from "classnames";
 import NavBar from "./pages/main/NavBar";
@@ -10,7 +9,7 @@ import CursosECertificados from "./pages/main/CursosECertificados";
 import { Analytics } from "@vercel/analytics/react";
 
 function App() {
-  const [mode, setMode] = useState("ligth");
+  const [mode, setMode] = useState("dark");
 
   return (
     <div
@@ -20,8 +19,7 @@ function App() {
       })}
     >
       <Analytics />
-      <NavBar mode={mode} />
-      <DisplayMode mode={mode} setMode={setMode} />
+      <NavBar mode={mode} setMode={setMode} />
       <Main mode={mode} />
       <Tecnologias mode={mode} />
       <Projetos mode={mode} />

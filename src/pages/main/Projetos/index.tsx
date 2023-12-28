@@ -20,14 +20,9 @@ export default function Projetos({ mode }: Props) {
       </div>
       <ul className={styles.list}>
         {projects.map((project) => (
-          <a
-            key={project.title}
-            className={styles.card}
-            href={project.linkHost}
-            target="_blank"
-          >
+          <a key={project.title} className={styles.card} href={project.linkHost} target="_blank">
             <div className={styles.image}>
-              <img src={project.preview} />
+              <img src={project.preview} alt="project preview " />
             </div>
             <div className={styles.details}>
               <div

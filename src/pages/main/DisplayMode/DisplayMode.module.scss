@@ -1,65 +1,50 @@
 @import "../../../styles/variables.scss";
-.mode__container {
-  display: flex;
-  justify-content: end;
-  width: 100%;
-}
+
 .button__container {
   display: flex;
   justify-content: center;
-  width: 12%;
-  @media (max-width: 800px) {
-    width: 18%;
-  }
-  @media (max-width: 600px) {
-    width: 23%;
-  }
-  @media (max-width: 400px) {
-    margin-top: -2%;
-    width: 32%;
-  }
+  align-items: center;
+  width: 100px;
 }
+
 .mode {
   display: flex;
-  margin-top: 8px;
   justify-content: right;
   background-color: transparent;
   padding: 8px;
-  width: 50%;
+  width: 70px;
   border-radius: 15px;
   border: 1px solid $green-bg-color;
   box-shadow: 10px 5px 1px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  transition: background-color 250ms;
+  transition: 250ms ease-in-out;
+  color: $green-bg-color;
+  &__sticky {
+    color: white;
+    border: 2px solid $green-bg-color;
+  }
   &__dark {
-    transition: background-color 250ms;
+    transition: 250ms ease-in-out;
     justify-content: left;
     background-color: transparent;
     border: 1px solid $background-color;
   }
-}
-
-.mode__icon__dark {
-  color: white;
-}
-
-.mode__icon {
-  color: $green-bg-color;
-}
-
-.mode:hover {
-  transition: 250ms;
-
-  border: 1px solid white;
-  transform: scale(1.07);
-
-  .mode__icon {
-    transition: 250ms;
-    color: black;
+  &__icon__dark {
+    color: white;
   }
-  .mode__icon__dark {
-    transition: 250ms;
-    color: $green-bg-color;
+
+  &:hover {
+    border: 1px solid white;
+    transform: scale(1.07);
+
+    .mode__icon {
+      transition: 250ms;
+      color: $gray;
+    }
+    .mode__icon__dark {
+      transition: 250ms;
+      color: $green-bg-color;
+    }
   }
 }
 
@@ -71,9 +56,5 @@
   .mode__container {
     display: flex;
     justify-content: right;
-  }
-
-  .mode {
-    width: 67px;
   }
 }

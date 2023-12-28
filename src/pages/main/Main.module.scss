@@ -21,11 +21,16 @@
     text-align: justify;
     font-size: 22px;
     padding: 18px;
+    line-height: 1.8em;
     &__dark {
       border-left: 1px solid $green-bg-color;
     }
     &__icons {
       text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0 1.8svw;
     }
     &__icon {
       padding: 8px;
@@ -154,6 +159,7 @@
       }
       &__icons {
         order: 1;
+        gap: 0 8svw;
       }
     }
   }
