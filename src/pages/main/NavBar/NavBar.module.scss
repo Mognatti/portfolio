@@ -27,7 +27,6 @@
       color: $font-color-dark;
     }
   }
-
   @media (max-width: 796px) {
     gap: 0 8svw;
   }
@@ -43,7 +42,7 @@
   margin-left: 8svw;
   padding-left: 18px;
   @media (max-width: 1000px) {
-    width: 60%;
+    width: 50%;
   }
   @media (max-width: 500px) {
     margin-left: 16px;
@@ -53,7 +52,7 @@
 }
 
 .inner_links {
-  width: 50%;
+  width: 53.5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,6 +110,9 @@
   width: 100%;
   gap: 0 16px;
   padding: 0;
+  @media (max-width: 365px) {
+    margin-right: 30%;
+  }
 
   li {
     transition: 350ms;
