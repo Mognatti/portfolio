@@ -34,6 +34,7 @@
 }
 
 .title {
+  min-width: fit-content;
   margin: 18px;
   display: flex;
   justify-content: left;
@@ -41,14 +42,25 @@
   align-self: center;
   margin-left: 8svw;
   padding-left: 18px;
+  @media (max-width: 1000px) {
+    width: 60%;
+  }
+  @media (max-width: 500px) {
+    margin-left: 16px;
+    padding-left: 0;
+    width: fit-content;
+  }
 }
 
 .inner_links {
-  width: 60%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0 4svw;
+  @media (max-width: 1000px) {
+    display: none;
+  }
   a {
     text-decoration: none;
     color: black;
