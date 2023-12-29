@@ -25,9 +25,9 @@ export default function DisplayMode({ mode, setMode }: Props) {
         onClick={() => handleClickMode()}
       >
         {mode === "dark" ? (
-          <MdDarkMode size="20" className={styles.mode__icon__dark} />
+          <MdDarkMode size="18" className={styles.mode__icon__dark} />
         ) : (
-          <MdLightMode size="20" className={styles.mode__icon} />
+          <MdLightMode size="18" className={styles.mode__icon} />
         )}
       </button>
     </div>
