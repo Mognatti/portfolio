@@ -1,39 +1,22 @@
 import styles from "./CursosECertificados.module.scss";
 import classNames from "classnames";
 import { certificados } from "./certificadosLista";
-import { MdChevronLeft, MdChevronRight } from "react-icons/md";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface Props {
   mode: string;
 }
 
 export default function CursosECertificados({ mode }: Props) {
-  const list = useRef<HTMLUListElement>(null);
+  const list = useRef<HTMLUListElement | null>(null);
+  const scroller = useRef<HTMLDivElement | null>(null);
+  const [animate, setAnimate] = useState(false);
 
-  const scrollLeft = () => {
-    list.current?.scrollLeft == 0
-      ? list.current?.scrollBy({
-          left: +list.current.scrollWidth / certificados.length,
-          behavior: "smooth",
-        })
-      : list.current?.scrollBy({
-          left: -list.current.scrollWidth / certificados.length,
-          behavior: "smooth",
-        });
-  };
-
-  const scrollRight = () => {
-    list.current!.scrollLeft > list.current!.scrollWidth - 1420
-      ? list.current?.scrollBy({
-          left: -list.current.scrollWidth / certificados.length,
-          behavior: "smooth",
-        })
-      : list.current?.scrollBy({
-          left: +list.current.scrollWidth / certificados.length,
-          behavior: "smooth",
-        });
-  };
+  useEffect(() => {
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setAnimate(true);
+    }
+  }, []);
 
   return (
     <section className={styles.container}>
@@ -46,23 +29,25 @@ export default function CursosECertificados({ mode }: Props) {
       >
         <p> Certificados de Cursos </p>
       </div>
-      <div className={styles.list__container}>
-        <div className={styles.move__left}>
-          <MdChevronLeft size={30} onClick={scrollLeft} />
-        </div>
-        <ul ref={list} className={classNames({ [styles.list]: true })}>
+
+      <div className={classNames({ [styles.scroller]: true, [styles.scroller__animated]: animate })} ref={scroller}>
+        <ul ref={list} className={classNames({ [styles.scroller__inner]: true })}>
           {certificados.map((certificado) => (
             <li key={certificado.nome}>
               <a href={certificado.link} target="_blank">
                 <img src={certificado.img} alt="Imagem do certificado" />
               </a>
-              <p>{certificado.nome}</p>
+            </li>
+          ))}
+          {/* dupe for animation */}
+          {certificados.map((certificado) => (
+            <li key={certificado.link}>
+              <a href={certificado.link} target="_blank">
+                <img src={certificado.img} alt="Imagem do certificado" />
+              </a>
             </li>
           ))}
         </ul>
-        <div className={styles.move__right}>
-          <MdChevronRight size={30} onClick={scrollRight} />
-        </div>
       </div>
     </section>
   );

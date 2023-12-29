@@ -89,7 +89,7 @@
   background: $green-bg-color;
   transition: 0.5s;
   transform-origin: left;
-  transform: perspective(2000px) rotateY(-90deg);
+  transform: perspective(2000px) rotateY(90deg);
   @media (max-width: 800px) {
     width: 100%;
     transform: perspective(2000px) rotateY(0deg);

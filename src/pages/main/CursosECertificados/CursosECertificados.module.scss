@@ -1,5 +1,11 @@
 @import "../../../styles/variables.scss";
 
+@keyframes scroll {
+  to {
+    transform: translate(-50%);
+  }
+}
+
 .container {
   width: 100%;
   display: flex;
@@ -28,71 +34,51 @@
   margin: 0;
 }
 
-.list::-webkit-scrollbar {
-  display: none;
-}
-
-.list {
-  margin-top: 16px;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-  width: 100%;
-  padding: 0;
-  scrollbar-width: none;
-
-  li {
-    width: 33.333%;
-    display: inline-block;
-    padding: 8px;
-    :hover {
-      transition: 350ms;
-      transform: scale(1.02);
+.scroller {
+  max-width: 80svw;
+  outline: 1px solid lime;
+  &__animated {
+    overflow: hidden;
+    // any color would do, just need a 100% opacity color. used white
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    .scroller__inner {
+      width: fit-content;
+      flex-wrap: nowrap;
+      animation: scroll 40s linear infinite;
+      white-space: nowrap;
+      height: fit-content;
+      padding: 0;
+      margin: 32px 0 32px 0;
+      &:hover {
+        animation-play-state: paused;
+      }
     }
   }
-  img {
-    width: 100%;
-    padding: 8px;
-  }
-  p {
-    text-align: center;
-    border-left: 1px solid $green-bg-color;
-  }
-}
-.move__left,
-.move__right {
-  padding: 15px;
-  cursor: pointer;
-  opacity: 0.6;
-}
-.move__left:hover,
-.move__right:hover {
-  transition: 350ms;
-  transform: scale(2);
-  opacity: 1;
 }
 
-* {
-  text-decoration: none;
+.scroller__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+  padding-block: 1rem;
+
+  img {
+    width: 350px;
+    transition: 350ms ease-in-out;
+    @media (max-width: 500px) {
+      width: 250px;
+    }
+    &:hover {
+      transform: scale(1.04);
+    }
+  }
 }
 
 @media (max-width: 1245px) {
-  .list {
-    padding: 8px;
+  .scroller__inner {
     li {
       width: 90%;
-      padding: 8px;
     }
-    img {
-      padding: 0px;
-    }
-    p {
-      display: none;
-      border: none;
-    }
-  }
-  .move__left,
-  .move__right {
-    display: none;
   }
 }
