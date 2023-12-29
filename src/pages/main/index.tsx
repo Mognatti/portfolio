@@ -55,7 +55,7 @@ export default function Main({ mode }: Props) {
   ];
 
   return (
-    <section className={styles.main}>
+    <section className={styles.main} id="sobre">
       <div className={styles.intro}>
         <p
           className={classNames({

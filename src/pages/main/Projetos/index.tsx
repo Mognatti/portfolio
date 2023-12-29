@@ -9,7 +9,7 @@ interface Props {
 
 export default function Projetos({ mode }: Props) {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="projetos">
       <div
         className={classNames({
           [styles.title]: true,

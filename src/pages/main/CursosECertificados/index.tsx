@@ -19,7 +19,7 @@ export default function CursosECertificados({ mode }: Props) {
   }, []);
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="cursos">
       <div
         id="container"
         className={classNames({

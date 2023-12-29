@@ -11,7 +11,7 @@ interface Props {
 
 const showScrollUpButtonYpos = 500;
 
-const navLinks = [
+const outLinks = [
   {
     id: "linkedin",
     link: (
@@ -30,6 +30,29 @@ const navLinks = [
   },
 ];
 
+const innerLinks = [
+  {
+    id: "sobre",
+    scr: "#sobre",
+    title: "Sobre Mim",
+  },
+  {
+    id: "tecnologias",
+    scr: "#tech_stack",
+    title: "Tech Stack",
+  },
+  {
+    id: "projetos",
+    scr: "#projetos",
+    title: "Projetos",
+  },
+  {
+    id: "projetos",
+    scr: "#cursos",
+    title: "Certificados",
+  },
+];
+
 export default function NavBar({ mode, setMode }: Props) {
   const { sticky, yPos, goTop } = useWindowScrollY();
 
@@ -45,8 +68,21 @@ export default function NavBar({ mode, setMode }: Props) {
       <div className={styles.title}>
         <p>Caio Mognatti</p>
       </div>
+      <nav
+        className={classNames({
+          [styles.inner_links]: true,
+          [styles.inner_links__dark]: mode === "dark",
+          [styles.inner_links__sticky]: sticky,
+        })}
+      >
+        {innerLinks.map((link) => (
+          <a key={link.id} href={link.scr}>
+            {link.title}
+          </a>
+        ))}
+      </nav>
       <DisplayMode {...{ mode, setMode }} />
-      <nav className={styles.nav}>
+      <nav className={styles.out_links}>
         <ul
           className={classNames({
             [styles.list]: true,
@@ -55,7 +91,7 @@ export default function NavBar({ mode, setMode }: Props) {
             [styles["list__dark__sticky"]]: sticky && mode === "dark",
           })}
         >
-          {navLinks.map((item) => (
+          {outLinks.map((item) => (
             <li key={item.id}>{item.link}</li>
           ))}
           <li>{yPos > showScrollUpButtonYpos && <IoIosArrowDropup size="25" onClick={() => goTop()} />}</li>

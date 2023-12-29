@@ -8,14 +8,14 @@ interface Props {
 
 export default function Tecnologias({ mode }: Props) {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="tech_stack">
       <div
         className={classNames({
           [styles.title]: true,
           [styles["title__dark"]]: mode === "dark",
         })}
       >
-        <p>Tecnologias e Ferramentas</p>
+        <p>Tech Stack</p>
       </div>
 
       <ul className={styles.list}>
