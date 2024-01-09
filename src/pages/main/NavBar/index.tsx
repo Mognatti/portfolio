@@ -47,7 +47,7 @@ const innerLinks = [
     title: "Projetos",
   },
   {
-    id: "projetos",
+    id: "certificados",
     scr: "#cursos",
     title: "Certificados",
   },
