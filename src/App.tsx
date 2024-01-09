@@ -1,11 +1,11 @@
 import Main from "./pages/main";
-import Tecnologias from "./pages/main/Tecnologias";
+import TechStack from "./pages/main/TechStack";
 import { useState } from "react";
 import styles from "./App.module.scss";
 import classNames from "classnames";
-import NavBar from "./pages/main/NavBar";
-import Projetos from "./pages/main/Projetos";
-import CursosECertificados from "./pages/main/CursosECertificados";
+import Header from "./pages/main/Header";
+import Projects from "./pages/main/Projects";
+import Certificates from "./pages/main/Certificates";
 import { Analytics } from "@vercel/analytics/react";
 
 function App() {
@@ -19,11 +19,11 @@ function App() {
       })}
     >
       <Analytics />
-      <NavBar mode={mode} setMode={setMode} />
+      <Header mode={mode} setMode={setMode} />
       <Main mode={mode} />
-      <Tecnologias mode={mode} />
-      <Projetos mode={mode} />
-      <CursosECertificados mode={mode} />
+      <TechStack mode={mode} />
+      <Projects mode={mode} />
+      <Certificates mode={mode} />
     </div>
   );
 }

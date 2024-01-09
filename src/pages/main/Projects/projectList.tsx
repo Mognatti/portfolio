@@ -1,9 +1,4 @@
-import {
-  SiTypescript,
-  SiSass,
-  SiJest,
-  SiStyledcomponents,
-} from "react-icons/si";
+import { SiTypescript, SiSass, SiJest, SiStyledcomponents } from "react-icons/si";
 import { ImHtmlFive, ImCss3 } from "react-icons/im";
 import { FaReact } from "react-icons/fa";
 import AluroniThumb from "../../../../public/img/Aluroni_Preview.png";
@@ -12,7 +7,7 @@ import GamelistThumb from "../../../../public/img/Gamelist_Preview.png";
 import Meteorathumb from "../../../../public/img/Meteora_Preview.png";
 import DiegoThumb from "../../../../public/img/Diego_Renato_Personal_Preview.png";
 
-export const projects = [
+export const projectList = [
   {
     title: "Aluroni",
     subtitle: "Cardápio de uma cozinha italiana",
@@ -71,8 +66,7 @@ export const projects = [
       <SiTypescript key="ts-icon" size="20" />,
     ],
     linkHost: "https://front-end-challenge-alura-7-edition.vercel.app/",
-    linkProjeto:
-      "https://github.com/Mognatti/front-end-challenge-alura-7-edition",
+    linkProjeto: "https://github.com/Mognatti/front-end-challenge-alura-7-edition",
     preview: Meteorathumb,
   },
   {

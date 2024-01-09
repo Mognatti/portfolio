@@ -1,13 +1,13 @@
-import styles from "./Projetos.module.scss";
+import styles from "./Projetcs.module.scss";
 import classNames from "classnames";
-import { projects } from "./projetos";
+import { projectList } from "./projectList";
 import { IoLogoGithub } from "react-icons/io";
 
 interface Props {
   mode: string;
 }
 
-export default function Projetos({ mode }: Props) {
+export default function Projects({ mode }: Props) {
   return (
     <section className={styles.container} id="projetos">
       <div
@@ -19,7 +19,7 @@ export default function Projetos({ mode }: Props) {
         <p> Meus Projetos </p>
       </div>
       <ul className={styles.list}>
-        {projects.map((project) => (
+        {projectList.map((project) => (
           <a key={project.title} className={styles.card} href={project.linkHost} target="_blank">
             <div className={styles.image}>
               <img src={project.preview} alt="project preview " />

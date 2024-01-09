@@ -144,3 +144,22 @@
 .list__dark__sticky a {
   color: $green-bg-color;
 }
+
+.scroller {
+  height: 2px;
+  width: 100svw;
+  position: fixed;
+  top: 8svh;
+  background-color: $green-bg-color;
+  scale: 0 1;
+  animation: animation-scroller linear;
+  animation-timeline: scroll(y);
+  transform-origin: left;
+  z-index: 999;
+}
+
+@keyframes animation-scroller {
+  to {
+    scale: 1 1;
+  }
+}

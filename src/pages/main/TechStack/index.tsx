@@ -1,12 +1,12 @@
-import { tecnologias } from "./tecnologias";
-import styles from "./Tecnologias.module.scss";
+import { stackList } from "./stackList";
+import styles from "./TechStack.module.scss";
 import classNames from "classnames";
 
 interface Props {
   mode: string;
 }
 
-export default function Tecnologias({ mode }: Props) {
+export default function TechStack({ mode }: Props) {
   return (
     <section className={styles.container} id="tech_stack">
       <div
@@ -19,7 +19,7 @@ export default function Tecnologias({ mode }: Props) {
       </div>
 
       <ul className={styles.list}>
-        {tecnologias.map((tecnologia) => {
+        {stackList.map((tecnologia) => {
           return (
             <li
               key={tecnologia.nome}

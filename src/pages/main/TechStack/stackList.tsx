@@ -3,7 +3,7 @@ import { IoLogoGithub } from "react-icons/io";
 import { SiTypescript, SiJavascript, SiSass, SiFirebase } from "react-icons/si";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 
-export const tecnologias = [
+export const stackList = [
   {
     nome: "HTML",
     icon: <ImHtmlFive size="40" />,

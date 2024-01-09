@@ -1,13 +1,13 @@
-import styles from "./CursosECertificados.module.scss";
+import styles from "./Certificates.module.scss";
 import classNames from "classnames";
-import { certificados } from "./certificadosLista";
+import { certificados } from "./certificateList";
 import { useEffect, useRef, useState } from "react";
 
 interface Props {
   mode: string;
 }
 
-export default function CursosECertificados({ mode }: Props) {
+export default function Certificates({ mode }: Props) {
   const list = useRef<HTMLUListElement | null>(null);
   const scroller = useRef<HTMLDivElement | null>(null);
   const [animate, setAnimate] = useState(false);
