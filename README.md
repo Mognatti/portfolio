@@ -16,4 +16,4 @@ Cada projeto se abre como uma página de um caderno, externando a descrição do
 <img src='src/assets/git_preview/certificates.png' alt='certificates preview'/>
 Efeito de carrossel infinito para os certificados
 <hr />
-A tech stack não está no preview pois não iria caber em um único print 😉
+<p>A tech stack não está no preview pois não iria caber em um único print <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Winking%20Face.png" alt="Winking Face" width="20" /></p>
