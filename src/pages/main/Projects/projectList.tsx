@@ -1,13 +1,48 @@
-import { SiTypescript, SiSass, SiJest, SiStyledcomponents } from "react-icons/si";
+import { SiTypescript, SiSass, SiJest, SiStyledcomponents, SiFirebase } from "react-icons/si";
 import { ImHtmlFive, ImCss3 } from "react-icons/im";
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaNodeJs } from "react-icons/fa";
 import AluroniThumb from "../../../../public/img/Aluroni_Preview.png";
 import AmigoSecretoThumb from "../../../../public/img/Amigo_Secreto_Preview.png";
 import GamelistThumb from "../../../../public/img/Gamelist_Preview.png";
 import Meteorathumb from "../../../../public/img/Meteora_Preview.png";
 import DiegoThumb from "../../../../public/img/Diego_Renato_Personal_Preview.png";
+import MoglabThumb from "../../../../public/img/Moglab_Preview.png";
 
 export const projectList = [
+  {
+    title: "Moglab",
+    subtitle: "Artigos de Saúde",
+    description:
+      "Aplicação responsiva que demonstra meu potencial Full-Stack. Fiz a API usando Node.js e o front usando React.ts. O banco de dados está alocado no Firebase. A aplicação permite a navegação entre diferentes disicplinas e artigos para fins academicos e ainda conta com um dashboard de administrador para editar e criar novos conteúdos.",
+    madeWith: [
+      <FaReact key="react-icon" size="20" />,
+      <FaNodeJs key="node-icon" size="20" />,
+      <SiTypescript key="ts-icon" size="20" />,
+      <ImHtmlFive key="html-icon" size="20" />,
+      <ImCss3 key="css-icon" size="20" />,
+      <SiStyledcomponents key="styled-icons" size="20" />,
+      <SiFirebase key="firebase-icon" size="20" />,
+    ],
+    linkHost: "https://moglab.netlify.app ",
+    linkProjeto: "https://github.com/Mognatti/mogLab",
+    preview: MoglabThumb,
+  },
+  {
+    title: "Gamelist Challenge",
+    subtitle: "Processo seletivo para estágio",
+    description:
+      "Aplicação Full-Stack que recebe dados de uma API para apresentar ao usuário, que poderá criar uma conta para favoritar e avaliar os itens que chegam da API. A autenticação e o banco do usuário ficam no firebase",
+    madeWith: [
+      <FaReact key="react-icon" size="20" />,
+      <ImHtmlFive key="html-icon" size="20" />,
+      <SiStyledcomponents key="styled-components-icon" size="25" />,
+      <SiTypescript key="ts-icon" size="20" />,
+      <SiFirebase key="firebase-icon" size="20" />,
+    ],
+    linkHost: "https://game-list-challenge.vercel.app/",
+    linkProjeto: "https://github.com/Mognatti/game-list-challenge",
+    preview: GamelistThumb,
+  },
   {
     title: "Aluroni",
     subtitle: "Cardápio de uma cozinha italiana",
@@ -22,22 +57,6 @@ export const projectList = [
     linkHost: "https://aluroni-menu.vercel.app/",
     linkProjeto: "https://github.com/Mognatti/Aluroni",
     preview: AluroniThumb,
-  },
-
-  {
-    title: "Gamelist Challenge",
-    subtitle: "Processo seletivo para estágio",
-    description:
-      "Aplicação Full-Stack que recebe dados de uma API para apresentar ao usuário, que poderá criar uma conta para favoritar e avaliar os itens que chegam da API. A autenticação e o banco do usuário ficam no firebase",
-    madeWith: [
-      <FaReact key="react-icon" size="20" />,
-      <ImHtmlFive key="html-icon" size="20" />,
-      <SiStyledcomponents key="styled-components-icon" size="25" />,
-      <SiTypescript key="ts-icon" size="20" />,
-    ],
-    linkHost: "https://game-list-challenge.vercel.app/",
-    linkProjeto: "https://github.com/Mognatti/game-list-challenge",
-    preview: GamelistThumb,
   },
   {
     title: "Diego Renato Personal",

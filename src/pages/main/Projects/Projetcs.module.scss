@@ -90,6 +90,7 @@
   transition: 0.5s;
   transform-origin: left;
   transform: perspective(2000px) rotateY(90deg);
+  line-height: 1.25em;
   @media (max-width: 800px) {
     width: 100%;
     transform: perspective(2000px) rotateY(0deg);
