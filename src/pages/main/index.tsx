@@ -73,12 +73,12 @@ export default function Main({ mode }: Props) {
           })}
         >
           <p>
-            Desenvolvedor Web Full Stack, comecei a estudar programação em 2022. Sou formado em biomedicina e já cheguei
-            a lecionar na área, mas optei por trocar de carreira assim que conheci mais afundo as tarefas de um dev.
-            Sempre tive interesse na área de tecnologia e, quando resolvi estudar, me apaixonei. Sinto que encontrei
-            minha vocação e estou muito feliz com a possibilidade de trabalhar com aquilo que realmente gosto. Ainda
-            tenho muito a aprender, mas não me falta determinação para tal! Estudo diariamente e desejo me diferenciar
-            cada vez mais.
+            Estudante do segundo semestre de Engenharia de Software, ingressei no mundo da tecnologia em 2022, estudando
+            Python. Depois disso, aprendi JavaScript e React, chegando depois no Node.js e no TypeScript. Realizei
+            alguns projetos tanto pessoais quanto para clientes e tornei-me um desenvolvedor Full-Stack. Estudo
+            continuamente as ferramentas de desenvolvimento para me tornar um profissional mais completo, capaz de criar
+            soluções úteis e centradas nos clientes. Sou bem comunicativo e gosto muito de aprender mais sobre as novas
+            tecnologias para melhorar a minha capacidade de colaborar com a equipe e com o sucesso dos projetos.
           </p>
         </div>
         <div className={styles.about__description__icons}>
